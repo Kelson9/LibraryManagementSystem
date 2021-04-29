@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="LibraryMS.jnlp">
+  <information>
+    <title>LibraryMS</title>
+    <vendor>KELSON</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="LibraryMS.jar" size="32291" download="eager" />
+  </resources>
+  <application-desc main-class="libraryms.LibraryMS"  name="LibraryMS" >
+  </application-desc>
+  <update check="always"/>
+</jnlp>
