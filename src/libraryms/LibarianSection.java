@@ -49,14 +49,39 @@ public class LibarianSection extends javax.swing.JFrame {
         jLabel1.setText("Libarian Section");
 
         jButton1.setText("Add Books");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("View Books");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Issue Book");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("View Issued Book");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Logout");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,6 +122,41 @@ public class LibarianSection extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+   AddBooks lgf=new AddBooks();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+   ViewBooks lgf=new ViewBooks();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+   IssueBooks lgf=new IssueBooks();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+   ViewIssuedBooks lgf=new ViewIssuedBooks();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+   WelcomePage lgf=new WelcomePage();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

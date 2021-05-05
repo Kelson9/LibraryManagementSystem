@@ -5,6 +5,8 @@
  */
 package libraryms;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author KELSON
@@ -43,8 +45,18 @@ public class DeleteLibarian extends javax.swing.JFrame {
         });
 
         jButton1.setText("Delete");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Back");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,6 +98,26 @@ public class DeleteLibarian extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+   AdminSection lgf=new AdminSection();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+String sid=jTextField1.getText();
+				if(sid==null||sid.trim().equals("")){
+					JOptionPane.showMessageDialog(DeleteLibarian.this,"Id can't be blank");
+				}else{
+					int id=Integer.parseInt(sid);
+					int i=LibarianDao.delete(id);
+					if(i>0){
+						JOptionPane.showMessageDialog(DeleteLibarian.this,"Record deleted successfully!");
+					}else{
+						JOptionPane.showMessageDialog(DeleteLibarian.this,"Unable to delete given id!");
+                                        }}    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

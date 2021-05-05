@@ -131,8 +131,11 @@ public class IssueBooks extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+   LibarianSection lgf=new LibarianSection();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

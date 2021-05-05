@@ -40,10 +40,25 @@ public class AdminSection extends javax.swing.JFrame {
         jLabel1.setText("Admin Section");
 
         jButton1.setText("Add Libarian");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("View Libarian");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Delete Libarian");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Logout");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -86,8 +101,32 @@ public class AdminSection extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+   WelcomePage lgf=new WelcomePage();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+   AddLibarian lgf=new AddLibarian();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+   ViewLibarian lgf=new ViewLibarian();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+   DeleteLibarian lgf=new DeleteLibarian();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

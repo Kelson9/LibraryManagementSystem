@@ -5,6 +5,8 @@
  */
 package libraryms;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author KELSON
@@ -70,8 +72,18 @@ public class AddBooks extends javax.swing.JFrame {
         });
 
         jButton1.setText("Add Books");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Back");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,6 +159,29 @@ public class AddBooks extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                       String callno=jTextField1.getText();
+			String name=jTextField2.getText();
+			String author=jTextField3.getText();
+			String publisher=jTextField4.getText();
+			String squantity=jTextField5.getText();
+			int quantity=Integer.parseInt(squantity);
+			int i=BookDao.save(callno, name, author, publisher, quantity);
+			if(i>0){
+				JOptionPane.showMessageDialog(AddBooks.this,"Books added successfully!");
+				
+				
+			}else{
+				JOptionPane.showMessageDialog(AddBooks.this,"Sorry, unable to save!");
+			}    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+   LibarianSection lgf=new LibarianSection();
+                  lgf.setVisible(true);
+                  lgf.pack();
+                  lgf.setLocationRelativeTo(null);
+                  this.dispose();    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
