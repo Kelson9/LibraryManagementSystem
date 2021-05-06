@@ -15,7 +15,7 @@ import java.sql.PreparedStatement;
  */
 public class BookDao {
     
-    public static int save(String callno,String name,String author,String publisher,int quantity,String issued,String added_date){
+    public static int save(String callno,String name,String author,String publisher,int quantity,int issued,String added_date){
 	int status=0;
 	try{
 		Connection con=DatabaseConfig.getConnection();
@@ -25,7 +25,7 @@ public class BookDao {
 		ps.setString(3,author);
 		ps.setString(4,publisher);
 		ps.setInt(5,quantity);
-                ps.setString(6,issued);
+                ps.setInt(6,issued);
                 ps.setString(7,added_date);
 
 		status=ps.executeUpdate();

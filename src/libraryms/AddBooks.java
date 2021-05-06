@@ -179,8 +179,9 @@ public class AddBooks extends javax.swing.JFrame {
 			String author=jTextField3.getText();
 			String publisher=jTextField4.getText();
 			String squantity=jTextField5.getText();
-                        String issued=jTextField6.getText();
+                        String issuedb=jTextField6.getText();
                         String  added_date="Monday 26th 2021";
+                        int issued=Integer.parseInt(issuedb);
 			int quantity=Integer.parseInt(squantity);
 			int i=BookDao.save(callno, name, author, publisher, quantity,issued,added_date);
 			if(i>0){
