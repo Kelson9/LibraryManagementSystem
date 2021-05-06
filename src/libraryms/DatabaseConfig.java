@@ -18,8 +18,8 @@ public class DatabaseConfig {
      
         Connection con = null;
         try {
-           Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/gojob_new","root","");
+           Class.forName("org.postgresql.Driver");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5433/postgres", "postgres", "postgres");
                         System.out.println("connected  to database successfullly");
         } catch (Exception ex) {
             System.out.println(ex.getMessage());

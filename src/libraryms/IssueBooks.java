@@ -5,6 +5,8 @@
  */
 package libraryms;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author KELSON
@@ -60,6 +62,11 @@ public class IssueBooks extends javax.swing.JFrame {
         });
 
         jButton1.setText("Issue Book");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Book");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +143,30 @@ public class IssueBooks extends javax.swing.JFrame {
                   lgf.pack();
                   lgf.setLocationRelativeTo(null);
                   this.dispose();    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+	
+			String bookcallno=jTextField1.getText();
+			int studentid=Integer.parseInt(jTextField2.getText());
+			String studentname=jTextField3.getText();
+			String studentcontact=jTextField4.getText();
+			
+			if(IssueBookDao.checkBook(bookcallno)){
+			
+			int i=IssueBookDao.save(bookcallno, studentid, studentname, studentcontact);
+			if(i>0){
+				JOptionPane.showMessageDialog(IssueBooks.this,"Book issued successfully!");
+				
+				
+			}else{
+				JOptionPane.showMessageDialog(IssueBooks.this,"Sorry, unable to issue!");
+			}//end of save if-else
+			
+			}else{
+				JOptionPane.showMessageDialog(IssueBooks.this,"Sorry, Callno doesn't exist!");
+			}//end of checkbook if-else
+			
+			    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -19,7 +19,7 @@ public class LibarianDao {
 		int status=0;
 		try{
 			Connection con=DatabaseConfig.getConnection();
-			PreparedStatement ps=con.prepareStatement("insert into Libarian(name,email,password,address,city,contact) values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("insert into Librarian(name,email,password,address,city,contact) values(?,?,?,?,?,?)");
 			ps.setString(1,name);
 			ps.setString(2,password);
 			ps.setString(3,email);
@@ -35,7 +35,7 @@ public class LibarianDao {
 		int status=0;
 		try{
 			Connection con=DatabaseConfig.getConnection();
-			PreparedStatement ps=con.prepareStatement("delete from Libarian where id=?");
+			PreparedStatement ps=con.prepareStatement("delete from Librarian where id=?");
 			ps.setInt(1,id);
 			status=ps.executeUpdate();
 			con.close();
@@ -47,7 +47,7 @@ public class LibarianDao {
 		boolean status=false;
 		try{
 			Connection con=DatabaseConfig.getConnection();
-			PreparedStatement ps=con.prepareStatement("select * from Libarian where name=? and password=?");
+			PreparedStatement ps=con.prepareStatement("select * from Librarian where name=? and password=?");
 			ps.setString(1,name);
 			ps.setString(2,password);
 			ResultSet rs=ps.executeQuery();

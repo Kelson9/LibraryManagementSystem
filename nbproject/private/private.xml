@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/AdminSection.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/IssueBookDao.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/ReturnBookDao.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/DatabaseConfig.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/LibarianSection.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/LibarianDao.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/ViewLibarian.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/AddBooks.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/BookDao.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/ReturnBooks.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/IssueBooks.java</file>
+            <file>file:/C:/Users/KELSON/Desktop/Advanceddb/src/libraryms/AddLibarian.java</file>
+        </group>
     </open-files>
 </project-private>

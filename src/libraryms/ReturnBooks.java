@@ -5,6 +5,8 @@
  */
 package libraryms;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author KELSON
@@ -32,8 +34,8 @@ public class ReturnBooks extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,17 +46,17 @@ public class ReturnBooks extends javax.swing.JFrame {
 
         jLabel3.setText("Student Id:");
 
-        jButton1.setText("Return Book");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Return Book");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -81,11 +83,11 @@ public class ReturnBooks extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(97, 97, 97))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33))))
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(138, 138, 138))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,9 +102,9 @@ public class ReturnBooks extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(44, 44, 44)
+                .addComponent(jButton1)
+                .addGap(36, 36, 36)
                 .addComponent(jButton2)
                 .addContainerGap(51, Short.MAX_VALUE))
         );
@@ -110,19 +112,25 @@ public class ReturnBooks extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   ReturnBooks lgf=new ReturnBooks();
-                  lgf.setVisible(true);
-                  lgf.pack();
-                  lgf.setLocationRelativeTo(null);
-                  this.dispose();    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
    LibarianSection lgf=new LibarianSection();
                   lgf.setVisible(true);
                   lgf.pack();
                   lgf.setLocationRelativeTo(null);
                   this.dispose();    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                               String bookcallno=jTextField1.getText();
+				int studentid=Integer.parseInt(jTextField2.getText());
+				int i=ReturnBookDao.delete(bookcallno, studentid);
+				if(i>0){
+					JOptionPane.showMessageDialog(ReturnBooks.this,"Book returned successfully!");
+					
+					
+				}else{
+					JOptionPane.showMessageDialog(ReturnBooks.this,"Sorry, unable to return book!");
+				}
+			    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
